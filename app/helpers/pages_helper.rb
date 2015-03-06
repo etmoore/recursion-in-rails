@@ -1,12 +1,21 @@
 module PagesHelper
 
+  # def page_list(pages)
+  #   html = "<ul>".html_safe
+  #   pages.each do |page|
+  #     html += "<li>#{link_to page.title, page_path(page)}</li>".html_safe
+  #   end
+  #   html += "</ul>".html_safe
+  #   html
+  # end
   def page_list(pages)
     html = "<ul>".html_safe
     pages.each do |page|
-      html += "<li>#{link_to page.title, page_path(page)}</li>".html_safe
+      html += "<li>#{link_to page.title, page_path(page)}".html_safe
+      html += page_list(page.pages)
+      html += "</li>".html_safe
     end
     html += "</ul>".html_safe
-    html
   end
 
   # The %Q{} syntax is just another way of creating a string
