@@ -2,6 +2,11 @@
 
 Use this app as an opportunity to practice writing tree-traversal algorithms with ActiveRecord objects.
 
+## Setup
+
+* Run `bin/setup`
+* Run `rails s`
+
 ## Challenge #1 - Page Tree View
 
 Make the `pages#index` view show a nested list of page, by changing the `page_list` method in `app/helpers/pages_helper.rb`.
