@@ -3,8 +3,8 @@ default: &default
 
 development:
   <<: *default
-  database: rails-template-01-development
+  database: recursion-in-rails-development
 
 test:
   <<: *default
-  database: rails-template-01-test
+  database: recursion-in-rails-test
